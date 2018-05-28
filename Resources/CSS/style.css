@@ -1,4 +1,161 @@
-html {
-  font-size: 28px;
-  color: white;
+/*=======Universal Design Choices========*/
+body {
+  margin: auto;
+  color: #404040;
+  font-family: Arial;
+}
+
+.Content .Container:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  padding-top: 64px;
+  border: 1px solid darkgray;
+  border-top: none;
+}
+
+.Container {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  color: #404040;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.Container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain
+}
+
+/*=======Header Secion ========*/
+header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 64px;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 24px;
+}
+
+header nav {
+  margin-right: 24px;
+}
+
+nav span {
+  padding: 8px;
+}
+
+@media only screen and (min-width: 470px) {
+  .Mobile {
+    display: none;
+  }
+}
+
+/*==============Mobile Header=========*/
+@media only screen and (max-width: 470px) {
+  .logo,.Desktop {
+    display: none;
+  }
+  .Mobile {
+    width: 100%;
+  }
+
+  .Mobile nav {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/*===========Banner #1==========*/
+.FirstBannerLeft{
+  margin: 32px 24px;
+  width: 60%;
+}
+.FirstBannerRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  margin: 24px;
+}
+
+button {
+  background-color: #404040	;
+  width: 100%;
+  height: 40px;
+  margin-top: 24px;
+}
+
+ button span {
+   margin: 8px;
+   color: white;
+   font-size: 16px;
+ }
+
+/*==========Mobile Banner1============*/
+@media only screen and (max-width: 470px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .FirstBannerLeft img {
+    margin: 0px;
+    width: 100%;
+  }
+}
+
+/*===========Banner #2=========*/
+.SecondBannerLeft {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 32px 24px;
+}
+
+.SecondBannerLeft p {
+  font-size: 14px;
+}
+
+.SecondBannerLeft span {
+  font-size: 12px;
+}
+
+.SecondBannerRight {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+
+.SecondBannerRightMini {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid lightgray;
+  margin-top: 32px;
+}
+
+.SecondBannerRightMini img {
+  height: auto;
+  width: 35%;
+  margin: 16px;
 }
