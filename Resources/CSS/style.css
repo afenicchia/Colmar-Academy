@@ -5,7 +5,7 @@ body {
   font-family: Arial;
 }
 
-.Content .Container:nth-child(odd) {
+.Container:nth-child(odd) {
   background-color: lightgray;
 }
 
@@ -27,16 +27,28 @@ h1 {
   color: #404040;
   font-weight: bold;
   font-size: 30px;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 18px;
 }
 
 p {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .Container img {
   height: 100%;
   width: 100%;
   object-fit: contain
+}
+
+@media only screen and (max-width: 470px) {
+  .Container {
+    border-top: 1px solid lightgray;
+    margin-bottom: 32px;
+  }
 }
 
 /*=======Header Secion ========*/
@@ -71,11 +83,14 @@ nav span {
   }
 }
 
+
 /*==============Mobile Header=========*/
 @media only screen and (max-width: 470px) {
-  .logo,.Desktop {
+  .logo,
+  .Desktop {
     display: none;
   }
+
   .Mobile {
     width: 100%;
   }
@@ -86,12 +101,13 @@ nav span {
   }
 }
 
-/*===========Banner #1==========*/
-.FirstBannerLeft{
+/*===========Main Banner==========*/
+.MainBannerLeft{
   margin: 32px 24px;
   width: 60%;
 }
-.FirstBannerRight {
+
+.MainBannerRight {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,50 +128,219 @@ button {
    font-size: 16px;
  }
 
-/*==========Mobile Banner1============*/
+/*==========Mobile Main Banner============*/
 @media only screen and (max-width: 470px) {
   .Container {
     display: flex;
     flex-direction: column;
   }
 
-  .FirstBannerLeft img {
-    margin: 0px;
+  .MainBannerLeft {
+    margin: 0px 0px 16px 0px;
     width: 100%;
+  }
+
+  .MainBannerLeft img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .MainBannerRight button {
+    margin-bottom: 32px;
+    background-color: gray;
   }
 }
 
-/*===========Banner #2=========*/
-.SecondBannerLeft {
+/*===========Banner=========*/
+.BannerLeft {
   display: flex;
   flex-direction: column;
   width: 60%;
   margin: 32px 24px;
 }
 
-.SecondBannerLeft p {
-  font-size: 14px;
-}
-
-.SecondBannerLeft span {
+.BannerLeft span {
   font-size: 12px;
+  margin-bottom: 32px;
 }
 
-.SecondBannerRight {
+.BannerLeft h1 {
+  margin: 32px 0px;
+}
+
+.BannerRight {
   display: flex;
   flex-direction: column;
   width: 35%;
-}
-
-.SecondBannerRightMini {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid lightgray;
   margin-top: 32px;
 }
 
-.SecondBannerRightMini img {
+.BannerRightMini {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid lightgray;
+
+}
+
+.BannerRightMini img {
   height: auto;
   width: 35%;
   margin: 16px;
+}
+
+.BannerRight .BannerRightMini:nth-last-child(1) {
+  background-color: lightgray;
+}
+
+.BannerRightMiniText {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.BannerRightMiniText span {
+  font-size: 14px;
+  color: skyblue;
+}
+
+.BannerRightMiniText h2 {
+  margin-bottom: 0px;
+}
+
+.BannerRightMiniText p {
+  font-size: 14px;
+  color: #707070;
+}
+
+.Thesis {
+  display: flex;
+  flex-direction: Column;
+  align-items: center;
+}
+
+.Heading {
+  margin: 32px;
+}
+
+.ThesisContent {
+  display: flex;
+  flex-direction: Row;
+}
+
+.Academy {
+  color: lightgray;
+}
+/*==========Mobile Banner============*/
+@media only screen and (max-width: 470px) {
+  .Practice {
+    display: none;
+  }
+
+  .BannerLeft {
+    width: 100%;
+  }
+
+  .BannerRight .BannerRightMini:nth-last-child(1) {
+    background-color: white;
+  }
+
+  .BannerRight {
+    width: 100%;
+  }
+
+  .BannerRightMini {
+    width: 100%;
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .BannerRightMini img {
+    width: 100%;
+    margin-left: 16px;
+  }
+
+  .BannerRightMiniText {
+    width: 100%;
+    margin-left: 16px;
+  }
+}
+
+/*==========Start Learning============*/
+.CourseContainer h1{
+  margin: 32px 0px;
+  text-align: center;
+}
+
+.CoursesAvailable {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 32px 54px 32px 54px;
+}
+
+.Course {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 270px;
+  height: 300px;
+  margin: 0px 16px 32px 16px;
+}
+
+.Course img {
+  height: auto;
+}
+
+.CourseText {
+    margin: 16px 0px 24px 16px;
+}
+
+.CourseText p {
+  font-size: 14px;
+  color: #707070;
+}
+
+@media only screen and (max-width: 470px) {
+  .Desktop {
+    display: none;
+  }
+
+  .CourseTitle {
+    background-color: lightgray;
+    margin: 8px 16px 0px 16px;
+  }
+
+  .CourseTitle h2 {
+    padding: 16px 0px 24px 16px;
+  }
+
+  .CourseContainer {
+    background-color: white;
+  }
+}
+
+/*==============Footer====================*/
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid darkgray;
+  color: darkgray;
+  font-size: 12px;
+  height: 75px;
+}
+
+footer div {
+  margin: 16px 24px;
+}
+
+@media only screen and (max-width: 470px) {
+  .Terms {
+    display: none;
+  }
 }
